@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-caveat: "Caveat", cursive;
+  --font-dancing: "Dancing Script", cursive;
+  --font-vibes: "Great Vibes", cursive;
+  --font-sacramento: "Sacramento", cursive;
+
+  --color-acrobat-red: #E5252A;
+  --color-acrobat-darkRed: #C21B20;
+  --color-acrobat-lightRed: #FEE2E2;
+  --color-acrobat-slate: #1E1E24;
+  --color-acrobat-dark: #121214;
+  --color-acrobat-card: #24242A;
+  --color-acrobat-border: #33333E;
+  --color-acrobat-blue: #0A3871;
+  --color-acrobat-lightBlue: #E8F0FE;
+  --color-acrobat-gray: #6B7280;
+  --color-acrobat-lightGray: #F3F4F6;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5252A;
+  border-radius: 4px;
+}
+
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.scanner-guide {
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.65);
+}
+
+.placed-stamp {
+  position: absolute;
+  cursor: move;
+  border: 1.5px dashed #0A3871;
+  background: rgba(10, 56, 113, 0.07);
+  transition: box-shadow 0.15s ease;
+  touch-action: none;
+}
+
+.placed-stamp.selected {
+  border: 2px solid #E5252A;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.2);
+}
+
+.resize-handle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #E5252A;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  right: -8px;
+  bottom: -8px;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+.stamp-del-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background: #E5252A;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+

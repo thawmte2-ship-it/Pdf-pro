@@ -1,0 +1,6 @@
+{
+  "name": "THAWMTE TEC PDF PRO",
+  "description": "Official Common Services Centre (CSC) PDF Suite featuring PDF to Word & Excel conversion, E-Sign & CSC Seal studio, Document & 2-in-1 ID Card Scanner with auto edge detection, and full PDF organization tools.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
